@@ -12,3 +12,9 @@ vim.api.nvim_set_keymap(
   '<cmd>lua vim.diagnostic.open_float(nil, {focus=true, scope="cursor", focusable=true})<CR>',
   { noremap = true, silent = true }
 )
+
+-- Buffer navigation
+vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { noremap = true, silent = true, desc = "Next buffer" })
+vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { noremap = true, silent = true, desc = "Previous buffer" })
+vim.keymap.set("n", "H", ":bprevious<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "L", ":bnext<CR>", { noremap = true, silent = true })
