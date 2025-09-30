@@ -28,11 +28,32 @@ return {
   },
   keys = {
     -- Toggle AI CLI terminal (using <leader>sk to avoid conflict with avante)
-    { "<leader>sk", function() require("sidekick.cli").toggle({ focus = true }) end, desc = "Toggle Sidekick CLI", mode = { "n", "v" } },
+    {
+      "<leader>sk",
+      function()
+        require("sidekick.cli").toggle({ focus = true })
+      end,
+      desc = "Toggle Sidekick CLI",
+      mode = { "n", "v" },
+    },
     -- Select AI prompt
-    { "<leader>sp", function() require("sidekick.cli").select_prompt() end, desc = "Sidekick Prompt", mode = { "n", "v" } },
+    {
+      "<leader>sp",
+      function()
+        require("sidekick.cli").select_prompt()
+      end,
+      desc = "Sidekick Prompt",
+      mode = { "n", "v" },
+    },
     -- Toggle Claude specifically
-    { "<leader>sc", function() require("sidekick.cli").toggle({ name = "claude", focus = true }) end, desc = "Sidekick Claude", mode = { "n", "v" } },
+    {
+      "<leader>sc",
+      function()
+        require("sidekick.cli").toggle({ name = "claude", focus = true })
+      end,
+      desc = "Sidekick Claude",
+      mode = { "n", "v" },
+    },
     -- Jump to or apply next edit suggestion
     {
       "<tab>",
@@ -43,7 +64,7 @@ return {
       end,
       expr = true,
       desc = "Goto/Apply Next Edit Suggestion",
-      mode = { "i", "n" }
+      mode = { "i", "n" },
     },
   },
   dependencies = {
