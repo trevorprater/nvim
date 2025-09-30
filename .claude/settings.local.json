@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:github.com)",
+      "Read(//tmp/neovim-config/**)",
+      "Read(//private/tmp/neovim-config/lua/**)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
