@@ -5,12 +5,16 @@ return {
   version = false, -- set this if you want to always pull the latest change
   opts = {
     provider = "openai",
-    openai = {
-      endpoint = "https://api.x.ai/v1",
-      model = "grok-code-fast-1",
-      timeout = 30000,
-      temperature = 0.5, -- adjusted for better variability
-      max_tokens = 4096,
+    providers = {
+      openai = {
+        endpoint = "https://api.x.ai/v1",
+        model = "grok-code-fast-1",
+        timeout = 30000,
+        max_tokens = 16000,
+        extra_request_body = {
+          temperature = 0.5, -- adjusted for better variability
+        },
+      },
     },
   },
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`

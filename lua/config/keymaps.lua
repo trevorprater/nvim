@@ -5,6 +5,9 @@
 vim.keymap.set("i", "jk", "<ESC>", { noremap = true })
 vim.keymap.set("n", "gtfo", ":q!<CR>", { noremap = true })
 
+-- Focus diagnostic floating window
+vim.api.nvim_set_keymap('n', 'fd', '<cmd>lua vim.diagnostic.open_float(nil, {focus=true, scope="cursor", focusable=true})<CR>', {noremap=true, silent=true})
+
 -- AI-generated commit messages
 vim.keymap.set("n", "<leader>gm", function()
   require("config.functions").generate_commit_message()

@@ -3,7 +3,8 @@
     "allow": [
       "WebFetch(domain:github.com)",
       "Read(//tmp/neovim-config/**)",
-      "Read(//private/tmp/neovim-config/lua/**)"
+      "Read(//private/tmp/neovim-config/lua/**)",
+      "Read(//Users/trevor/ws/agent-sandbox/cagent/cmd/root/**)"
     ],
     "deny": [],
     "ask": []
